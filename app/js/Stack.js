@@ -2,11 +2,11 @@
  * Created by srinivasa on 9/16/2014.
  */
 
-var IINVENTIONS = {};
+/*var IINVENTIONS = {};*/
 
-IINVENTIONS.Stack = function(size){
-    if(!this instanceof IINVENTIONS.Stack){
-        return new IINVENTIONS.Stack();
+Stack = function(size){
+    if(!this instanceof Stack){
+        return new Stack();
     }
 
     var content = [];

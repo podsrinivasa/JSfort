@@ -3,9 +3,9 @@
  */
 
 describe('Stack Test spec - ', function(){
-    var stackColl = {};
+    var stackColl;
     beforeEach(function(){
-        stackColl = new IINVENTIONS.Stack();
+        stackColl = new Stack(0);
     });
 
     it('should create a zero length Stack collection with no input size -  ', function(){
@@ -13,13 +13,13 @@ describe('Stack Test spec - ', function(){
     });
 
     it('should create a Stack with given size -  ', function(){
-        stackColl = new IINVENTIONS.Stack(5);
+        stackColl = new Stack(5);
         expect(stackColl.capacity()).toEqual(5);
     });
 
     it('should create a zero size Stack given null -  ', function(){
-        stackColl = new IINVENTIONS.Stack(null);
-        expect(stackColl.size()).toEqual(0);
+        stackColl = new Stack(null);
+        expect(stackColl.size()).toEqual(0)
     });
 
     it('should push add an element to stack ', function(){
@@ -36,7 +36,7 @@ describe('Stack Test spec - ', function(){
     });
 
     it('should throw stack overflow exception on Full stack push -', function(){
-         var stackColl = new IINVENTIONS.Stack(1);
+         var stackColl = new Stack(1);
          stackColl.push("Element one");
          //now adding second element should throw overflow error
         expect(function(){stackColl.push("Overflow");}).toThrow(new Error("Stack Overflow"));
