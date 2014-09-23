@@ -14,6 +14,8 @@ Stack = function(size){
     var capacity = typeof size == "number" ? parseInt(size) : 0;
     var STACK_UNDERFLOW = "Stack Underflow";
     var STACK_OVERFLOW = "Stack Overflow";
+    var NO_LIMIT = "NO LIMIT";
+
 
 
     this.push = function(element){
@@ -41,6 +43,6 @@ Stack = function(size){
     };
 
     this.capacity = function(){
-        return capacity;
+        return capacity != 0 ? capacity : NO_LIMIT;
     };
 };
